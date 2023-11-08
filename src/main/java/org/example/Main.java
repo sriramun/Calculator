@@ -17,6 +17,13 @@ public class Main {
         
         return res;
     }
+    public static double subtract(double a, double b) {
+        logger.info("Attempt Operation Subtraction");
+        double res = a-b;
+        logger.info("Attempt Successful!");
+        
+        return res;
+    }
 
     public static void main(String[] args) {
         logger.info("Start of execution");
@@ -53,9 +60,9 @@ public class Main {
                 case 0: // Addition
                     result = add(firstNumber, secondNumber);
                     break;
-                // case 1: // Subtraction
-                //     result = subtract(firstNumber, secondNumber);
-                //     break;
+                case 1: // Subtraction
+                    result = subtract(firstNumber, secondNumber);
+                    break;
                 // case 2: // Multiplication
                 //     result = multiply(firstNumber, secondNumber);
                 //     break;
