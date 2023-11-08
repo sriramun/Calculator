@@ -24,7 +24,13 @@ public class Main {
         
         return res;
     }
-
+    public static double multiply(double a, double b) {
+        logger.info("Attempt Operation Multiplication");
+        double res = a*b;
+        logger.info("Attempt Successful!");
+        
+        return res;
+    }
     public static void main(String[] args) {
         logger.info("Start of execution");
         System.out.printf("Hello and welcome to Calculator v0.0.0!\n");
@@ -63,9 +69,9 @@ public class Main {
                 case 1: // Subtraction
                     result = subtract(firstNumber, secondNumber);
                     break;
-                // case 2: // Multiplication
-                //     result = multiply(firstNumber, secondNumber);
-                //     break;
+                case 2: // Multiplication
+                    result = multiply(firstNumber, secondNumber);
+                    break;
                 // case 3: // Division
                 //     // Check for division by zero
                 //     if (secondNumber == 0) {
