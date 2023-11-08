@@ -27,4 +27,12 @@ public class CalculatorTest {
         double expectedResult = 0;
         Assert.assertNotEquals(expectedResult, calculator.add(a, b), 0.001);
     }
+
+    @Test
+    public void test_multiply() {
+        double a = 1;
+        double b = 2;
+        double expectedResult = 2;
+        Assert.assertEquals(expectedResult, calculator.multiply(a, b), 0.001);
+    }
 }
