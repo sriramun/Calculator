@@ -31,6 +31,13 @@ public class Main {
         
         return res;
     }
+    public static double divide(double a, double b) {
+        logger.info("Attempt Operation Division");
+        // double res = a*b;
+        // logger.info("Attempt Successful!");
+        
+        return a;
+    }
     public static void main(String[] args) {
         logger.info("Start of execution");
         System.out.printf("Hello and welcome to Calculator v0.0.0!\n");
