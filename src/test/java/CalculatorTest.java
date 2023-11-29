@@ -1,3 +1,6 @@
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
+
 import org.example.Main;
 import org.junit.Assert;
 import org.junit.Before;
@@ -34,5 +37,13 @@ public class CalculatorTest {
         double b = 2;
         double expectedResult = 2;
         Assert.assertEquals(expectedResult, calculator.multiply(a, b), 0.001);
+    }
+
+    @Test
+    public void test_divide() {
+        double result = calculator.divide(10.0, 2.0);
+        assertEquals(5.0, result, 0.0001);
+
+        assertThrows(ArithmeticException.class, () -> calculator.divide(10.0, 0.0));
     }
 }

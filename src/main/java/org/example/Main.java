@@ -33,10 +33,15 @@ public class Main {
     }
     public static double divide(double a, double b) {
         logger.info("Attempt Operation Division");
-        // double res = a*b;
-        // logger.info("Attempt Successful!");
-        
-        return a;
+        if (b == 0) {
+            logger.warn("Division by zero is not allowed");
+            throw new ArithmeticException("Division by zero");
+        }
+
+        double res = a / b;
+        logger.info("Attempt Successful!");
+
+        return res;
     }
     public static void main(String[] args) {
         logger.info("Start of execution");
@@ -79,14 +84,15 @@ public class Main {
                 case 2: // Multiplication
                     result = multiply(firstNumber, secondNumber);
                     break;
-                // case 3: // Division
-                //     // Check for division by zero
-                //     if (secondNumber == 0) {
-                //         System.out.println("Cannot divide by zero.");
-                //         continue;
-                //     }
-                //     result = divide(firstNumber, secondNumber);
-                //     break;
+                case 3: // Division
+                    // Check for division by zero
+                    if (secondNumber == 0) {
+                        logger.warn("Division by zero is not allowed");
+                        System.out.println("Cannot divide by zero.");
+                        continue;
+                    }
+                    result = divide(firstNumber, secondNumber);
+                    break;
                 default:
                     logger.warn("Invalid Input");
                     System.out.println("Invalid operation. Please try again.");
